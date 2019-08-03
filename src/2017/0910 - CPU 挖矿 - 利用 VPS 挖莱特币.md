@@ -7,7 +7,7 @@ tags:
 ---
 
 前段时间疯狂的`WannaCry`蠕虫病毒再一次将比特币带入大众视野，导致最近挖矿的人越来越多，AMD 显卡甚至都脱销还出现了专门的矿机。之前也还没有写过关于区块链技术的博客，后面打算有时间写两篇文章来介绍一下我对区块链技术的认识以及与比特币相关的一些东西。本文主要介绍了挖矿的概念，以及如何利用普通服务器的 CPU 来实现莱特币挖矿。
-![](../../assets/block-chain-miner.jpg)
+![](../assets/block-chain-miner.jpg)
 
 <!--more-->
 
@@ -59,7 +59,7 @@ ASIC（3.5THash/s）→
 下面我们将会使用一个VPS来进行挖矿，因为服务器是没有显卡的所以我们只能通过CPU来进行挖矿。我们挖矿的对象是`莱特币`以前被认为是山寨的比特币，目前价值在$85一枚，现在已经有了比特金莱特银这种说法，比特币实在是太难挖所以我们选择一个稍微能看到成效的币种。
 
 ### 1 选择一个矿池
-![LTC算力分布](../../assets/block-chain-ltc-calc.png)
+![LTC算力分布](../assets/block-chain-ltc-calc.png)
 根据上图不知道可靠不可靠的信息可以看出，目前`AntPool`矿池是算力最强的，我们也选择加入这个矿池去AntPool.com注册一个账号。
 
 ### 2 下载编译挖矿程序
@@ -93,7 +93,7 @@ $ make
 ```
 
 ### 3 创建一个矿工
-![创建矿工Jiavan.01](../../assets/block-chain-ltc-worker-create.png)
+![创建矿工Jiavan.01](../assets/block-chain-ltc-worker-create.png)
 
 ### 4 连接矿池
 ```shell
@@ -103,17 +103,17 @@ $ ./minerd -o stratum+tcp://stratum-ltc.antpool.com:8888 -u Jiavan.01 -p 1234
 连接矿池的地址以及输入矿工的名字，密码是一个可选项，因为矿池只需要知道是谁在给他工作就行了，不需要确认这个人是不是本人，所以只要矿工名字对了就ok了，没有人傻到帮别人工作还把自己的银行卡账号说成其他人的吧。
 
 ### 5 开始挖矿
-![矿工开始挖矿](../../assets/block-chain-start-mining.png)
+![矿工开始挖矿](../assets/block-chain-start-mining.png)
 连接上矿池后我们就开始做hash计算，可以看出我们这个CPU好像不是很给力啊只有5khash/s.
 
-![Server CPU占用](../../assets/block-chain-cpu.png)
+![Server CPU占用](../assets/block-chain-cpu.png)
 看看Server的状态，CPU几乎被跑得满满的。
 
 ### 6 获得收益
-![算力时间分布](../../assets/block-chain-worker-chart.png)
+![算力时间分布](../assets/block-chain-worker-chart.png)
 挖了一段时间我们可以看到VPS在不同时间段为矿池分担的算力。
 
-![挖矿收益](../../assets/block-chain-earning.png)
+![挖矿收益](../assets/block-chain-earning.png)
 通过过去几个小时的挖矿我们获得了 `0.00000011` 个莱特币，兑换成人命币大约是 `￥0.0000498806` 也就是说按照我现在这个VPS的CPU算力挖到价值一元的莱特币需要 `9.2814232981` 年的时间。以前听说用CPU挖矿的人电费都交不起，现在来看已经不仅仅是交不起电费的问题了...
 
 ---
