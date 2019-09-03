@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            #app {
+                height: 2000px;
+                background: linear-gradient(to bottom, gray, blue);
+            }
+            .mask {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                text-align: center;
+                font-size: 100px;
+                line-height: 100vh;
+            }
+            .modal {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 400px;
+                background: white;
+                overflow: scroll;
+            }
+            .modal > div {
+                height: 150px;
+                border-bottom: 1px solid gray;
+                text-align: center;
+                line-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="mask">mask</div>
+            <!-- <div class="modal">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+            </div> -->
+        </div>
+        <script src="./index.js"></script>
+        <script>
+            const $mask = document.querySelector('.mask');
+            const $modal = document.querySelector('.modal');
+            // fuckScrollChaining($mask, $modal);
+        </script>
+    </body>
+</html>
