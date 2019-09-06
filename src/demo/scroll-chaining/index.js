@@ -5,7 +5,7 @@ function fuckScrollChaining($mask, $modal) {
         e => {
             e.preventDefault();
         },
-        listenerOpts,
+        listenerOpts
     );
     const modalHeight = $modal.clientHeight;
     const modalScrollHeight = $modal.scrollHeight;
@@ -28,6 +28,6 @@ function fuckScrollChaining($mask, $modal) {
                 e.preventDefault();
             }
         },
-        listenerOpts,
+        listenerOpts
     );
 }
