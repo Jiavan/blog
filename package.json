@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My blog",
+  "main": "index.js",
+  "repository": "https://github.com/Jiavan/blog.git",
+  "author": "jiavan <jiavan.com@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "replace-in-file": "^4.1.3"
+  }
+}
