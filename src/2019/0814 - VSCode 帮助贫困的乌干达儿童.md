@@ -93,7 +93,7 @@ vim 中使用一些 motion 可以快速的来移动光标，如：
 更多使用可以查看 https://github.com/tpope/vim-surround。
 
 附上一张 vim 键位图，vim 开始适应需要一段时间，当形成肌肉记忆了用起来就很爽了。
-![](../assets/vim-keymap.png)
+![](https://raw.githubusercontent.com/Jiavan/blog/master/src/assets/vim-keymap.png)
 
 ### 输入法切换问题
 
