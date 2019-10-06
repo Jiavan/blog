@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            * {
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+            .item,
+            .placeholder {
+                height: 100px;
+                background: #eee;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="placeholder"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <script>
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 1
+            };
+            const observer = new IntersectionObserver(callback, options);
+            function callback(entries, observer) {
+                entries.forEach(item => {
+                    item.isIntersecting &&
+                        (item.target.style.backgroundImage =
+                            'url(https://sf6-ttcdn-tos.pstatp.com/obj/temai/FpNvgPeTSkNWlzjGvAElnMjTbGFbwww778-775)');
+                });
+                console.log(entries);
+                // console.log(entries, observer);
+            }
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => observer.observe(item));
+        </script>
+        <script src="./index.js"></script>
+    </body>
+</html>
