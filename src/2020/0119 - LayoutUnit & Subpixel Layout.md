@@ -135,7 +135,7 @@ pixelSnappedIntRect 的计算也很简单，它直接 round 到离自己最近�
 
 和上述 js 获取的 clientWidth 结果 8，9，8，8，9，8 完全一致。所以这里元素的大小可以通过 `pixelSnappedIntRect` 对齐方式来解释为什么有些元素会多/少一像素并且出现是「没有规则」的。
 
-### 如果选择
+### 如何选择
 
 上面介绍了 2 种对齐方式，那么在什么场景下 WebKit 用什么算法呢？以及所有的布局都会使用 subpixel layout 么？
 
