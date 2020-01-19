@@ -1,4 +1,4 @@
-## Layout Unit & Subpixel Layout
+## LayoutUnit & Subpixel Layout
 
 ### 引言
 
@@ -77,7 +77,7 @@ getWidth();
 
 在进行 subpixel 和 pixel 之间转换时，有两种方式，一种是 `enclosingIntRect` 另一种是 `pixelSnappedIntRect` 在上述的例子中使用了第二种转换方式。
 
-![](/Users/jiazhengquan/GitHub/blog/src/assets/webkit-layout-types.png)
+![](https://raw.githubusercontent.com/Jiavan/blog/master/src/assets/webkit-layout-types.png)
 
 上面的图中，灰色格子代表物理像素，蓝色区域表示 subpixel layout 计算值，黑色区域表示最终 subpixel -> pixel 的对齐结果。
 
@@ -147,7 +147,7 @@ pixelSnappedIntRect 的计算也很简单，它直接 round 到离自己最近�
 
 布局计算值有小数带来渲染结果不一致的情况经常发生在 rem 布局中，由于 DPR 的转换导致一些设备下很多场景都是小数。比如下面就是一个常见的真实业务场景。
 
-![](/Users/jiazhengquan/GitHub/blog/src/assets/subpixel-layout-popup.png)
+![](https://raw.githubusercontent.com/Jiavan/blog/master/src/assets/subpixel-layout-popup.png)
 
 在实现一个 popup 组件或者 dialog 组件时经常会有一些选项，css 也是能绘制出来的，比如上面 9 个红色的圆点，它们都是一个组件，预期宽高都是 10px，但是通过一系列的换算后第一个却变成了 9px，第二个又是 10px，9 个原点渲染出来不尽相同。
 
